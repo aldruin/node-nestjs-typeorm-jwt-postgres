@@ -16,3 +16,11 @@ GET  {{baseUrl}}/conceitos-manual
 ### ConceitosAutomaticoController
 # @name ConceitosAutomaticoController
 GET  {{baseUrl}}/conceitos-automatico
+
+### ConceitosManualService
+# @name ConceitosManualService
+GET  {{baseUrl}}/conceitos-manual/solution
+
+### ConceitosAutomaticoService
+# @name ConceitosAutomaticoService
+GET  {{baseUrl}}/conceitos-automatico/solution
