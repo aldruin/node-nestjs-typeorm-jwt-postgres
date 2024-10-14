@@ -9,9 +9,9 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
-  
+
   @Get('exemplo')
-  exemplo(): string{
+  exemplo(): string {
     return 'exemplo';
   }
 }
