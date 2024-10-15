@@ -1,5 +1,11 @@
 @baseUrl = http://localhost:3000
 
+# Recados
+###
+GET {{baseUrl}}/recados
+
+###
+GET {{baseUrl}}/recados/10
 
 ### AppController
 # @name AppControllerGet

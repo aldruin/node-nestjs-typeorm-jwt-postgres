@@ -10,8 +10,8 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Get('exemplo')
-  exemplo(){
-    return this.appService.solutionExample();
-  }
+  // @Get('exemplo')
+  // exemplo(){
+  //   return this.appService.solutionExample();
+  // }
 }

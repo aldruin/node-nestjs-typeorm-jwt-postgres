@@ -6,7 +6,7 @@ export class AppService {
     return 'Hello World!';
   }
 
-  solutionExample(){
-    return '1+1=2, service';
-  }
+  // solutionExample(){
+  //   return '1+1=2, service';
+  // }
 }
