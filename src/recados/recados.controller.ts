@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Patch, Post, Query } from '@nestjs/common';
 import { RecadosService } from './recados.service';
 
 @Controller('recados')
@@ -7,8 +7,9 @@ export class RecadosController {
 
   @HttpCode(HttpStatus.OK)
   @Get()
-  findAll() {
-    return 'Essa rota retorna varios recados';
+  findAll(@Query() pagination:any) {
+    const {limit = 10, offset = 0 } = pagination;
+    return `Essa rota retorna varios recados. Limit = ${limit}, Offset = ${offset}`;
   }
 
   @Get(':id')

@@ -1,5 +1,9 @@
 @baseUrl = http://localhost:3000
 
+###
+#Paginação
+GET {{baseUrl}}/recados/?limit=10&offset=10&user=aldruin
+
 # Recados
 ###
 GET {{baseUrl}}/recados
@@ -50,3 +54,4 @@ Content-Type: application/json
 
 ###
 DELETE {{baseUrl}}/recados/2
+
