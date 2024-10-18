@@ -1,19 +1,36 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Patch, Post } from '@nestjs/common';
 import { RecadosService } from './recados.service';
 
-@Controller()
+@Controller('recados')
 export class RecadosController {
   private readonly(recadosService: RecadosService) {}
 
-  //encontrar recados
-  @Get('recados')
+  @HttpCode(HttpStatus.OK)
+  @Get()
   findAll() {
     return 'Essa rota retorna varios recados';
   }
 
-  //encontrar um recado
-  @Get('recados/:id')
+  @Get(':id')
   findOne(@Param('id') id: number) {
     return `Essa rota retorna o recado ID ${id}`;
+  }
+
+  @Post()
+  create(@Body() body: string){
+    return body;
+  }
+
+  @Patch(':id')
+  update(@Param('id') id: number, @Body() body: any){
+    return {
+      id,
+      ...body,
+    }
+  }
+
+  @Delete(':id')
+  remove(@Param('id') id: number){
+    return 'recados apagados';
   }
 }

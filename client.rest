@@ -30,3 +30,23 @@ GET  {{baseUrl}}/conceitos-manual/solution
 ### ConceitosAutomaticoService
 # @name ConceitosAutomaticoService
 GET  {{baseUrl}}/conceitos-automatico/solution
+
+###
+POST {{baseUrl}}/recados/
+Content-Type: application/json
+
+{
+    "recado": "este é o recado que estou enviando =)"
+}
+
+###
+PATCH {{baseUrl}}/recados/1
+Content-Type: application/json
+
+{
+    "recado": "recado alterado",
+    "atualizar": "true"
+}
+
+###
+DELETE {{baseUrl}}/recados/2
